@@ -1,0 +1,10 @@
+Student ID : *****20553
+Computer IP : *.*.174.197
+DNS1 : *.*.1.1
+DNS2 : *.*.11.6
+Print : *.*.175.198
+Shared folder IP(WINE) : \\*.*.174.202\\
+
+
+BOJ : dlwotmd 64x2
+test push
