@@ -1,7 +1,7 @@
 # TIL_python
 
 ## Naming Convention
-![](img/name.jpg)
+![](https://github.com/tkxkd0159/TIL_python/blob/main/img/name.JPG)
 class는 ACCRONYM도 가능
 ```python
 # Protection attribute, E.g. from M import * does not import objects whose name starts with an underscore.
