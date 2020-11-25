@@ -31,5 +31,5 @@ Todo:
    http://google.github.io/styleguide/pyguide.html
 """
 from . import game
-from .funset import *
-
+from .import funset
+# from .funset import *
