@@ -40,8 +40,12 @@ def add_number(var, var2=0):
 def add_numbers(*args, **kwargs):
     if args != ():
         num_list = [ls for ls in args]
+    else :
+        num_list = []
     if kwargs != {}:
         num_list2 = [ls for ls in kwargs.values()]
+    else :
+        num_list2 = []
 
     newlist = num_list + num_list2
     return sum(newlist[:])

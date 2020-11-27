@@ -31,5 +31,7 @@ Todo:
    http://google.github.io/styleguide/pyguide.html
 """
 from . import game
+from .game import import_test2
 from .import funset
+from .funset import (square_number, add_numbers)
 # from .funset import *

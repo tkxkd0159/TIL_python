@@ -1,13 +1,13 @@
 import sys
-import whole_module as layer_1
-import whole_module.game as layer_2
+import mymodule as layer_1
+import mymodule.game as layer_2
 
 
 def main():
     ver = sys.version
 
     print(f'Start {ver} package test \n')
-    # print(whole_module.__doc__)
+    # print(mymodule.__doc__)
     layer_1.game.import_test2.game_test()
     layer_2.import_test2.game_test()
     print("")
@@ -27,6 +27,7 @@ def main():
     layer_1.funset.add_number(3, 4)
     data = {"x": 1, "y": 2, "z": 3}
     layer_1.funset.add_numbers(10, 11, 12, 13, **data)
+    layer_1.add_numbers(3,7,3,3,4)
     # print(layer_1.MODULENAME, "\n")
 
 if __name__ == "__main__":
