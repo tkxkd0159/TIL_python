@@ -20,7 +20,7 @@ phone.number = 11   # this can access to 'number' method directly regardless of 
 print(phone.number)
 
 #==================================
-class Test_property:
+class TestProperty:
     def __init__(self):
         self._number = 10
 
@@ -33,7 +33,7 @@ class Test_property:
             self._number = num
 
 
-phone2 = Test_property()
+phone2 = TestProperty()
 phone2.number = 11
 print(phone2.number)
 phone2.number = 12
