@@ -8,7 +8,7 @@ def io_test():
             if words in end_sig:
                 break
             meaning = input("한국어 뜻을 입력하세요: ")
-            file.write(file'{words} : {meaning}\n')
+            file.write(f'{words} : {meaning}\n')
 
 def word_test():
     with open('./Basic_Grammar/file_io/vocabulary.txt', 'r', encoding="UTF-8") as file:
@@ -23,6 +23,35 @@ def word_test():
                 print("맞았습니다!")
             else:
                 print(f"아쉽습니다. 정답은 {eng_word}입니다.")
+
+def word_test_random():
+    with open('./Basic_Grammar/file_io/vocabulary.txt', 'r', encoding="UTF-8") as file:
+        word_dict = {}
+        dict_idx = 0
+        for lines in file:
+            lines = lines.strip().split(" : ")
+            eng_word = lines[0]
+            kor_word = lines[1]
+            word_dict[dict_idx] = {kor_word:eng_word}
+            dict_idx += 1
+
+    while True:
+        pick_idx = random.randrange(0, len(word_dict))
+
+        for key, value in word_dict[pick_idx].items():
+            kor = key
+            eng = value
+
+        ans = input(f'{kor}: ')
+        if ans in ['q', 'ㅂ']:
+            print("program over")
+            break
+
+        if ans == eng:
+            print("정답")
+        else:
+            print(f'오답, 정답은 {eng}')
+
 
 
 def input_test():
@@ -47,4 +76,4 @@ def input_test():
             print(f'아쉽습니다. 정답은 {ans}였습니다.')
 
 if __name__ == "__main__":
-    word_test()
+    word_test_random()
