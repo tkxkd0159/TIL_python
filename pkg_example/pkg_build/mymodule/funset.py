@@ -22,6 +22,7 @@ def logging_decorator(func):
     def wrapper_function(*args, **kwargs):
         print(func.__name__ + " was called")
         print("결과 :", func(*args, **kwargs))
+        return func(*args, **kwargs)
     return wrapper_function
 
 MODULENAME = 'Practice module'
