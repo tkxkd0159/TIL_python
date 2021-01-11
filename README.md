@@ -1,9 +1,10 @@
-# TIL_python
-
+- [Naming Convention](#naming-convention)
+- [Module & Package](#module--package)
+  - [Use my custom pkg in any location](#use-my-custom-pkg-in-any-location)
 ```
 dir()  # return the names in the current scope
 ```
-## Naming Convention
+# Naming Convention
 ![](https://github.com/tkxkd0159/TIL_python/blob/main/img/name.JPG) <br>
 class는 ACCRONYM도 가능
 ```python
@@ -34,3 +35,18 @@ mypkg2
 mypkg3
 ...
 ```
+
+# Design Pattern
+`design_patter.py` 참조 
+## Decorator pattern
+```python
+class C(object):
+    @my_decorator
+    def method(self):
+        # method contents
+```
+## Observer pattern
+object의 one-to-many 의존 관계에서 한 object의 상태가 변경되면, 그 객체에 종속된 모든 객체에 그 내용을 통지하여 자동으로 상태를 갱신하는 방식
+
+## Singleton pattern
+해당 object의 instance가 하나만 존재하게 하는 것
