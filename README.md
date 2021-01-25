@@ -50,3 +50,18 @@ object의 one-to-many 의존 관계에서 한 object의 상태가 변경되면, 
 
 ## Singleton pattern
 해당 object의 instance가 하나만 존재하게 하는 것
+
+# JSON 처리
+```python
+import json
+# some JSON:
+x =  '{ "name":"John", "age":30, "city":"New York"}'
+
+# parse x:
+y = json.loads(x)
+# the result is a Python dictionary:
+print(y["age"])
+#convert to JSON
+y = json.dumps(y)
+print(f'{y} {type(y)}')
+```
