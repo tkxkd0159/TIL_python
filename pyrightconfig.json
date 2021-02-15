@@ -1,0 +1,19 @@
+
+  {
+  "include": [
+    "."
+  ],
+
+  "executionEnvironments": [
+
+    {
+      "root": "pkg_example",
+      "extraPaths": [
+        "pkg_example/mypkg"
+      ]
+    },
+    {
+      "root": "."
+    }
+  ]
+}
