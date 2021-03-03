@@ -72,28 +72,3 @@ print(y["age"])
 y = json.dumps(y)
 print(f'{y} {type(y)}')
 ```
-
-# Named Tuples
-```python
-from collections import namedtuple
-
-position = namedtuple('Coordinate', 'latitude logitude)
-my_town = position(40, 32) # my_town.latitude, my_town.logitude
-```
-
-# Create Enumeration
-```python
-from enum import Enum
-
-class DirectionLetter(Enum):
-    EAST = 'E'
-    SOUTH = 'S'
-    WEST = 'W'
-    NORTH = 'N'
-
-DirectionFunctional = Enum('Direction', 'EAST SOUTH WEST NORTH')
-
-for i in DirectionFunctional:
-  print(i.name, i.value)
-
-```
