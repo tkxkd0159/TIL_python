@@ -6,8 +6,6 @@
   - [Observer pattern](#observer-pattern)
   - [Singleton pattern](#singleton-pattern)
 - [JSON 처리](#json-처리)
-- [Named Tuples](#named-tuples)
-- [Create Enumeration](#create-enumeration)
 ```
 dir()  # return the names in the current scope
 ```
