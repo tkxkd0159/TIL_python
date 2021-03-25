@@ -1,1 +1,0 @@
-# iterator를 생성해주는 function
