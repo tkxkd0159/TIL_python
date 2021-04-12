@@ -22,15 +22,15 @@ print(phone.number)
 #==================================
 class TestProperty:
     def __init__(self):
-        self._number = 10
+        self.__number = 10
 
     @property  #get method
     def number(self):
-        return self._number
+        return self.__number
     @number.setter # set method
     def number(self,num):
         if num%2==0:
-            self._number = num
+            self.__number = num
 
 
 phone2 = TestProperty()
