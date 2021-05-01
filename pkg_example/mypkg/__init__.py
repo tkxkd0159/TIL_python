@@ -2,7 +2,7 @@
 
 # from . import shapes
 # from mypkg.shapes import shapes3d, shapes2d
-from mypkg.shapes.api import Circle, cube
+from .shapes.api import Circle, cube
 from . import stats
 
-print("execute __init__")
+print(f"Execute -> {__file__}")
