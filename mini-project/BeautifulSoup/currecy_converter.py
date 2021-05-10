@@ -24,68 +24,69 @@ country_list = table_row.find_all('tr')
 max_num = len(country_list)
 country_dict = {}
 for i in range(max_num):
-  country_dict[i] = country_list[i].get_text().split("\n")[1:-1]
+    country_dict[i] = country_list[i].get_text().split("\n")[1:-1]
 
 print('Welcome to currency converter')
 
 for key, value in country_dict.items():
-  print(f'# {key} {value[0]}')
+    print(f'# {key} {value[0]}')
 
 while True:
-  while True:
-    try:
+    while True:
+        try:
 
-      print("Where are you from? Choose a country by number.")
-      source_num = int(input('#: '))
-      if source_num >= max_num or source_num <= 0:
-        raise IndexError
-      source = country_dict[source_num]
-      print(f'{source[0]} \n')
-      break
+            print("Where are you from? Choose a country by number.")
+            source_num = int(input('#: '))
+            if source_num >= max_num or source_num <= 0:
+                raise IndexError
+            source = country_dict[source_num]
+            print(f'{source[0]} \n')
+            break
 
-    except ValueError:
-      print('That wasn\'t a number')
-    except IndexError:
-      print('Choose a number from the list')
+        except ValueError:
+            print('That wasn\'t a number')
+        except IndexError:
+            print('Choose a number from the list')
 
-  while True:
-    try:
+    while True:
+        try:
 
-      print("Now Choose another country.")
-      target_num = int(input('#: '))
-      if target_num >= max_num or target_num <= 0:
-        raise IndexError
+            print("Now Choose another country.")
+            target_num = int(input('#: '))
+            if target_num >= max_num or target_num <= 0:
+                raise IndexError
 
-      target = country_dict[target_num]
-      print(f'{target[0]} \n')
-      break
+            target = country_dict[target_num]
+            print(f'{target[0]} \n')
+            break
 
-    except ValueError:
-      print('That wasn\'t a number')
-    except IndexError:
-      print('Choose a number from the list')
+        except ValueError:
+            print('That wasn\'t a number')
+        except IndexError:
+            print('Choose a number from the list')
 
-  src_code = source[2]
-  tgt_code = target[2]
-  print(source)
+    src_code = source[2]
+    tgt_code = target[2]
+    print(source)
 
-  while True:
-    try:
-      print(f'How many {src_code} do you want to convert to {tgt_code}? ')
-      origin_money = float(input())
-      if origin_money < 0:
-        raise WrongNum
-      break
+    while True:
+        try:
+            print(
+                f'How many {src_code} do you want to convert to {tgt_code}? ')
+            origin_money = float(input())
+            if origin_money < 0:
+                raise WrongNum
+            break
 
-    except ValueError:
-      print('That wasn\'t a number')
-    except WrongNum:
-      print('Choose Positive Number')
+        except ValueError:
+            print('That wasn\'t a number')
+        except WrongNum:
+            print('Choose Positive Number')
 
-  result = currency_converter(origin_money, src_code, tgt_code)
-  if result is not False:
-    result = format_currency(result, target[2], locale="ko_KR")
-    print(f'{src_code}{origin_money:,.2f} is {result} \n')
-  else:
-    print(f'This pair is not valid \n')
-
+    result = currency_converter(origin_money, src_code, tgt_code)
+    if result is not False:
+        origin = format_currency(origin_money, src_code, locale="ko_KR")
+        result = format_currency(result, tgt_code, locale="ko_KR")
+        print(f'{origin} is {result} \n')
+    else:
+        print(f'This pair is not valid \n')
