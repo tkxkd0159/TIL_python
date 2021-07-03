@@ -79,4 +79,8 @@ if __name__ == "__main__":
     for i in Counter(3):
         print(i, end=' ')
 
+    temp = Counter(3)  # __iter__ test
+    for _ in range(10):
+        next(temp)
+
     print(f'\n{Counter(3)[1]}')
